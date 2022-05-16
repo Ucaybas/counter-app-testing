@@ -18,7 +18,7 @@ Run the app locally before running the test suite.
 
 ```sh
 # Install dependencies
-yarn dev
+yarn install
 
 # Run tests once
 yarn test
