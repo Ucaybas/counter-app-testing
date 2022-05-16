@@ -13,18 +13,23 @@ const buttons = {
     refreshItems: locate(".btn.btn-success.m-2")
 }
 
-// Clicks on each locator that is passed as an array
-const addItems = (...locators) => {
+// Clicks on each item locator that is passed as an array
+const addItems = locators => {
     locators.forEach(locator => {
         I.click(locator);
-    })
+    });
 }
 
-// Clicks on each locator that is passed as an array
-const deleteItems = (...locators) => {
-    locators.forEach(locator => {
-        I.click(locator);
-    })
+const addItem = locator => {
+    I.click(locator);
+}
+
+const subtractItem = locator => {
+    I.click(locator);
+}
+
+const deleteItem = locator => {
+    I.click(locator);
 }
 
 const refreshItems = () => {
@@ -32,16 +37,22 @@ const refreshItems = () => {
 }
 
 // Validates the total item count is equal to the param
-const validateTotalItemCount = async expectedCount => {
-    expect(await I.grabTextFrom(badges.itemsCount)).to.equal(expectedCount);
+const validateTotalItemCount = async (expectedCount, successMessage) => {
+    const count = await I.grabTextFrom(badges.itemsCount)
+    expect(count).to.equal(expectedCount, `Expected ${expectedCount} items in total but there was ${count}`);
+    if (successMessage) {
+        console.log(successMessage);
+    }
 }
 
 module.exports = {
     badges,
     buttons,
     addItems,
+    addItem,
+    subtractItem,
     refreshItems,
-    deleteItems,
+    deleteItem,
     validateTotalItemCount
 }
 
