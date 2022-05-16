@@ -10,7 +10,9 @@ More information can be found here: https://codecept.io/playwright/
 
 The counter-app can be found on this repo: https://github.com/arnab-datta/counter-app
 
-Run the app locally before running the test suite
+Run the app locally before running the test suite.
+
+`http://localhost:3000/` is the configured home URL. Please update this in the codecept.conf.js if the app is running on a different port.
 
 ### Scripts
 

@@ -40,6 +40,7 @@ const refreshItems = () => {
 const validateTotalItemCount = async (expectedCount, successMessage) => {
     const count = await I.grabTextFrom(badges.itemsCount)
     expect(count).to.equal(expectedCount, `Expected ${expectedCount} items in total but there was ${count}`);
+    // Only added this log as the criteria expects particular print in certain scenarios
     if (successMessage) {
         console.log(successMessage);
     }

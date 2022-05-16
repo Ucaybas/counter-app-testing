@@ -1,5 +1,5 @@
 exports.config = {
-  tests: './tests/*_test.js',
+  tests: './tests/*Test.js',
   output: './output',
   helpers: {
     Playwright: {
@@ -10,9 +10,9 @@ exports.config = {
   },
   include: {
     I: './steps_file.js',
-    homePage: './pages/homePage.js'
+    HomePage: './pages/HomePage.js'
   },
   bootstrap: null,
   mocha: {},
-  name: 'test-project'
+  name: 'counter-app-testing'
 }
