@@ -1,0 +1,27 @@
+{
+  "name": "counter-app-testing",
+  "version": "1.0.0",
+  "description": "This is a playwright project to test several workflows for a react application",
+  "main": "codecept.conf.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ucaybas/counter-app-testing.git"
+  },
+  "author": "Umit Caybas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ucaybas/counter-app-testing/issues"
+  },
+  "homepage": "https://github.com/Ucaybas/counter-app-testing#readme",
+  "dependencies": {
+    "chai": "^4.3.6",
+    "codeceptjs": "^3.3.3",
+    "playwright": "^1.22.0"
+  }
+}
